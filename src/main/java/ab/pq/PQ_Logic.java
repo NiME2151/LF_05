@@ -37,7 +37,7 @@ public class PQ_Logic {
         return -1;
     }
 
-    public double[] calcPQFormula(double p, double q) {
+    public double[] calculatePQ(double p, double q) {
         this.discriminant = Math.pow((p / 2), 2) - q;
         double head = ((p * -1) / 2);
         double tail = Math.sqrt(this.discriminant);
@@ -50,6 +50,9 @@ public class PQ_Logic {
         else if (solutionCount == 1) {
             this.results = new double[1];
             this.results[0] = head + tail;
+        }
+        else {
+            return new double[0];
         }
         return this.results;
     }
@@ -72,7 +75,7 @@ public class PQ_Logic {
     public void run() throws IOException {
         System.out.println("PQ-Formel-Rechner");
         setPAndQbyUserInput();
-        calcPQFormula(this.p, this.q);
+        calculatePQ(this.p, this.q);
         printX1AndX2();
     }
 }
