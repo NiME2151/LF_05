@@ -22,7 +22,7 @@ public class PqTests {
 
     @ParameterizedTest
     @MethodSource("getStreamArguments")
-    public void shouldReturnCorrectSolutionForPQ(double p, double q, double[] values) {
+    void shouldReturnCorrectSolutionForPQ(double p, double q, double[] values) {
         // given
 
         // when
@@ -36,7 +36,7 @@ public class PqTests {
 
     @ParameterizedTest
     @MethodSource("getStreamArguments")
-    public void shouldReturnCorrectLengthOfPQ(double p, double q, double[] values) {
+    void shouldReturnCorrectLengthOfPQ(double p, double q, double[] values) {
         // given
 
         // when
@@ -46,7 +46,7 @@ public class PqTests {
         assertThat(result.length).isEqualTo(values.length);
     }
 
-    public static Stream<Arguments> getStreamArguments() {
+    private static Stream<Arguments> getStreamArguments() {
         return Stream.of(
                 Arguments.of(1, 1, new double[] {}),
                 Arguments.of(4, 16, new double[] {}),

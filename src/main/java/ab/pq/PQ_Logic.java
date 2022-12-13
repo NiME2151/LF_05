@@ -39,7 +39,7 @@ public class PQ_Logic {
 
     public double[] calculatePQ(double p, double q) {
         this.discriminant = Math.pow((p / 2), 2) - q;
-        double head = ((p * -1) / 2);
+        double head = (p * -1) / 2;
         double tail = Math.sqrt(this.discriminant);
         int solutionCount = isThereAtLeastOneSolution();
         if (solutionCount == 2) {
