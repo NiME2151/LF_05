@@ -1,6 +1,6 @@
 package unit_tests.ab;
 
-import ab.pq.PQ_Logic;
+import ab.unit_testing.pq.PQ_Logic;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
