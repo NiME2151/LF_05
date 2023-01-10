@@ -16,4 +16,15 @@ class Torwart extends Spieler {
     public void setReaction(int reaction) {
         this.reaction = reaction;
     }
+
+    @Override
+    public String toString() {
+        return "Spieler{" +
+                "name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", strength=" + getStrength() +
+                ", motivation=" + getMotivation() +
+                ", reaction=" + this.reaction +
+                '}';
+    }
 }
