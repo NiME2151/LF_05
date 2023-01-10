@@ -38,10 +38,9 @@ class Trainer {
 
     @Override
     public String toString() {
-        return "Trainer{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", experience=" + experience +
-                '}';
+        return "Trainer\n" +
+                "Name: " + this.name + "\n" +
+                "Age: " + this.age + "\n" +
+                "Experience: " + this.experience;
     }
 }

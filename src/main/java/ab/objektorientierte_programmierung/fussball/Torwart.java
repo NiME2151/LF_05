@@ -19,12 +19,8 @@ class Torwart extends Spieler {
 
     @Override
     public String toString() {
-        return "Torwart{" +
-                "name='" + getName() + '\'' +
-                ", age=" + getAge() +
-                ", strength=" + getStrength() +
-                ", motivation=" + getMotivation() +
-                ", reaction=" + this.reaction +
-                '}';
+        return "Torwart-" +
+                super.toString() +
+                "Reaction: " + this.reaction;
     }
 }

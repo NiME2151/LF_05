@@ -68,13 +68,12 @@ class Spieler {
 
     @Override
     public String toString() {
-        return "Spieler{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", strength=" + strength +
-                ", goalShot=" + goalShot +
-                ", motivation=" + motivation +
-                ", goalCount=" + goalCount +
-                '}';
+        return "Spieler\n" +
+                "Name: " + this.name + "\n" +
+                "Age: " + this.age + "\n" +
+                "Strength: " + this.strength + "\n" +
+                "Goal Shot: " + this.goalShot + "\n" +
+                "Motivation: " + this.motivation + "\n" +
+                "Goal Count: " + this.goalCount + "\n";
     }
 }
