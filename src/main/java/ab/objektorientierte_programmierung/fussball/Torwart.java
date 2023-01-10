@@ -20,7 +20,7 @@ class Torwart extends Spieler {
     @Override
     public String toString() {
         return "Torwart-" +
-                super.toString() +
+                super.toString() + "\n" +
                 "Reaction: " + this.reaction;
     }
 }

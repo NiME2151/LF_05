@@ -1,37 +1,18 @@
 package ab.objektorientierte_programmierung.fussball;
 
-class Spieler {
+class Spieler extends Person {
 
-    private String name;
-    private int age;
     private int strength;
     private int goalShot;
     private int motivation;
     private int goalCount;
 
     public Spieler(String name, int age, int strength, int goalShot, int motivation, int goalCount) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
         this.strength = strength;
         this.goalShot = goalShot;
         this.motivation = motivation;
         this.goalCount = goalCount;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public int getStrength() {
@@ -68,12 +49,10 @@ class Spieler {
 
     @Override
     public String toString() {
-        return "Spieler\n" +
-                "Name: " + this.name + "\n" +
-                "Age: " + this.age + "\n" +
-                "Strength: " + this.strength + "\n" +
+        return "Spieler-" +
+                super.toString() + "\n" +
                 "Goal Shot: " + this.goalShot + "\n" +
                 "Motivation: " + this.motivation + "\n" +
-                "Goal Count: " + this.goalCount + "\n";
+                "Goal Count: " + this.goalCount;
     }
 }

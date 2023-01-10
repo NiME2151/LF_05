@@ -1,31 +1,12 @@
 package ab.objektorientierte_programmierung.fussball;
 
-class Trainer {
+class Trainer extends Person {
 
-    private String name;
-    private int age;
     private int experience;
 
     public Trainer(String name, int age, int experience) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
         this.experience = experience;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public int getExperience() {
@@ -38,9 +19,8 @@ class Trainer {
 
     @Override
     public String toString() {
-        return "Trainer\n" +
-                "Name: " + this.name + "\n" +
-                "Age: " + this.age + "\n" +
+        return "Trainer-" +
+                super.toString() + "\n" +
                 "Experience: " + this.experience;
     }
 }

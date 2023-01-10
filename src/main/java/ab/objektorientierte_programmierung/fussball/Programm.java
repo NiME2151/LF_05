@@ -28,7 +28,9 @@ class Programm {
         );
 
         System.out.println(trainer);
+        System.out.println();
         System.out.println(spieler);
+        System.out.println();
         System.out.println(torwart);
     }
 }
