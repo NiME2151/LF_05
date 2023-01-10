@@ -19,7 +19,7 @@ class Torwart extends Spieler {
 
     @Override
     public String toString() {
-        return "Spieler{" +
+        return "Torwart{" +
                 "name='" + getName() + '\'' +
                 ", age=" + getAge() +
                 ", strength=" + getStrength() +
