@@ -19,7 +19,16 @@ class Programm {
                 12
         );
 
+        Torwart torwart = new Torwart(
+                "Steffi",
+                38,
+                6,
+                10,
+                7
+        );
+
         System.out.println(trainer);
         System.out.println(spieler);
+        System.out.println(torwart);
     }
 }
