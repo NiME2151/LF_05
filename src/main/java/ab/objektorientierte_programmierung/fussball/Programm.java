@@ -38,7 +38,7 @@ class Programm {
         );
 
         Mannschaft mannschaft1 = new Mannschaft(
-                "Königsberger Pikelhauben",
+                "Königsberger Pickelhauben",
                 trainer,
                 torwart,
                 listOfSpieler
@@ -56,15 +56,11 @@ class Programm {
                 mannschaft2
         );
 
-        System.out.println(trainer);
-        System.out.println();
-        System.out.println(spieler);
-        System.out.println();
-        System.out.println(torwart);
-        System.out.println();
-        System.out.println("Avg Team Motivation: " + mannschaft1.getMotivation());
-        System.out.println("Avg Team Strength: " + mannschaft1.getStrength());
-        System.out.println();
+        System.out.println(trainer + "\n");
+        System.out.println(spieler + "\n");
+        System.out.println(torwart + "\n");
+        System.out.println("Avg Motivation T1: " + mannschaft1.getMotivation() + "\n");
+        System.out.println("Avg Strength T1: " + mannschaft1.getStrength() + "\n");
         spiel.getResult().incrementGoalCountOfTeamA();
         System.out.println(spiel);
     }

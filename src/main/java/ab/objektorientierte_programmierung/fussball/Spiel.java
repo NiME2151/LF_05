@@ -5,7 +5,7 @@ class Spiel {
     private final Mannschaft teamA;
     private final Mannschaft teamB;
     private final Ergebnis result = new Ergebnis();
-    private StringBuilder gameplay;
+    private final StringBuilder gameplay = new StringBuilder();
 
     public Spiel(Mannschaft teamA, Mannschaft teamB) {
         this.teamA = teamA;
@@ -30,8 +30,6 @@ class Spiel {
 
     @Override
     public String toString() {
-        return "Aktueller Punktestand\n" +
-                this.teamA.getName() + ": " + this.result.getGoalCountOfTeamA() + "\n" +
-                this.teamB.getName() + ": " + this.result.getGoalCountOfTeamB();
+        return this.gameplay.append("").toString();
     }
 }
