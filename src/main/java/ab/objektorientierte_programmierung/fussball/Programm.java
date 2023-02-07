@@ -3,6 +3,8 @@ package ab.objektorientierte_programmierung.fussball;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ab.objektorientierte_programmierung.fussball.Gameplay.runGame;
+
 class Programm {
 
     public static void main(String[] args) {
@@ -37,14 +39,14 @@ class Programm {
                 )
         );
 
-        Mannschaft mannschaft1 = new Mannschaft(
+        Mannschaft homeTeam = new Mannschaft(
                 "Königsberger Pickelhauben",
                 trainer,
                 torwart,
                 listOfSpieler
         );
 
-        Mannschaft mannschaft2 = new Mannschaft(
+        Mannschaft guestTeam = new Mannschaft(
                 "Böhmischer FB",
                 trainer,
                 torwart,
@@ -52,16 +54,18 @@ class Programm {
         );
 
         Spiel spiel = new Spiel(
-                mannschaft1,
-                mannschaft2
+                homeTeam,
+                guestTeam
         );
 
         System.out.println(trainer + "\n");
         System.out.println(spieler + "\n");
         System.out.println(torwart + "\n");
-        System.out.println("Avg Motivation T1: " + mannschaft1.getMotivation() + "\n");
-        System.out.println("Avg Strength T1: " + mannschaft1.getStrength() + "\n");
-        spiel.getResult().incrementGoalCountOfTeamA();
+        System.out.println("Avg Motivation of Home Team: " + homeTeam.getMotivation() + "\n");
+        System.out.println("Avg Strength of Home Team: " + homeTeam.getStrength() + "\n");
+        spiel.getResult().incrementGoalCountOfHomeTeam();
+
+        runGame(spiel);
         System.out.println(spiel);
     }
 }

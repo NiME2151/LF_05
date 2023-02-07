@@ -47,6 +47,10 @@ class Spieler extends Person {
         this.goalCount = goalCount;
     }
 
+    public void incrementGoalCount() {
+        this.goalCount += 1;
+    }
+
     @Override
     public String toString() {
         return "Spieler-" +

@@ -2,29 +2,29 @@ package ab.objektorientierte_programmierung.fussball;
 
 class Ergebnis {
 
-    private int goalCountOfTeamA = 0;
-    private int goalCountOfTeamB = 0;
+    private int goalCountOfHomeTeam = 0;
+    private int goalCountOfGuestTeam = 0;
 
-    public int getGoalCountOfTeamA() {
-        return goalCountOfTeamA;
+    public int getGoalCountOfHomeTeam() {
+        return goalCountOfHomeTeam;
     }
 
-    public int getGoalCountOfTeamB() {
-        return goalCountOfTeamB;
+    public int getGoalCountOfGuestTeam() {
+        return goalCountOfGuestTeam;
     }
 
-    public void incrementGoalCountOfTeamA() {
-        this.goalCountOfTeamA += 1;
+    public void incrementGoalCountOfHomeTeam() {
+        this.goalCountOfHomeTeam += 1;
     }
 
-    public void incrementGoalCountOfTeamB() {
-        this.goalCountOfTeamB += 1;
+    public void incrementGoalCountOfGuestTeam() {
+        this.goalCountOfGuestTeam += 1;
     }
 
     @Override
     public String toString() {
-        return "Ergebnis: \n" +
-                "Team A: " + goalCountOfTeamA + "\n" +
-                "Team B: " + goalCountOfTeamB;
+        return "Results: \n" +
+                "Home Team: " + goalCountOfHomeTeam + "\n" +
+                "Guest Team: " + goalCountOfGuestTeam;
     }
 }
