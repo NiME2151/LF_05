@@ -73,7 +73,7 @@ public class Gameplay {
         }
     }
 
-    public static boolean isGameCanceled() {
+    public static boolean isGameCancelled() {
         return randomInt(0, 999) == 0;
     }
 
@@ -83,7 +83,7 @@ public class Gameplay {
             int teamValueOfHomeTeam = determineTeamValue(game.getHomeTeam());
             int teamValueOfGuestTeam = determineTeamValue(game.getGuestTeam());
             int sum = randomInt(0 , (teamValueOfHomeTeam + teamValueOfGuestTeam));
-            if (isGameCanceled()) {
+            if (isGameCancelled()) {
                 throw new SpielAbbruchException(currentMinute);
             }
             else {
