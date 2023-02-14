@@ -65,7 +65,11 @@ class Programm {
         System.out.println("Avg Strength of Home Team: " + homeTeam.getStrength() + "\n");
         spiel.getResult().incrementGoalCountOfHomeTeam();
 
-        runGame(spiel);
+        try {
+            runGame(spiel);
+        } catch (SpielAbbruchException e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println(spiel);
     }
 }

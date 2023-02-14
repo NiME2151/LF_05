@@ -48,19 +48,19 @@ class Mannschaft {
         this.listOfSpieler = listOfSpieler;
     }
 
-    public double getMotivation() {
-        double totalMotivation = 0;
+    public int getMotivation() {
+        int totalMotivation = torwart.getMotivation();
         for (Spieler spieler : this.listOfSpieler) {
             totalMotivation += spieler.getMotivation();
         }
-        return totalMotivation / this.listOfSpieler.size();
+        return totalMotivation / (this.listOfSpieler.size() + 1);
     }
 
-    public double getStrength() {
-        double totalStrength = 0;
+    public int getStrength() {
+        int totalStrength = torwart.getStrength();
         for (Spieler spieler : this.listOfSpieler) {
             totalStrength += spieler.getStrength();
         }
-        return totalStrength / this.listOfSpieler.size();
+        return totalStrength / (this.listOfSpieler.size() + 1);
     }
 }

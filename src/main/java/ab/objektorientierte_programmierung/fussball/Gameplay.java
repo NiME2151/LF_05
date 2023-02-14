@@ -72,17 +72,26 @@ public class Gameplay {
         }
     }
 
-    public static void runGame(Spiel game) {
+    public static boolean isGameCanceled() {
+        return randomInt(0, 999) == 0;
+    }
+
+    public static void runGame(Spiel game) throws SpielAbbruchException {
         int currentMinute = randomInt(0, MAX_DURATION_FOR_NEXT_ACTION_IN_MINUTES);
         do {
             int teamValueOfHomeTeam = determineTeamValue(game.getHomeTeam());
             int teamValueOfGuestTeam = determineTeamValue(game.getGuestTeam());
             int sum = randomInt(0 , (teamValueOfHomeTeam + teamValueOfGuestTeam));
-            if (sum > teamValueOfHomeTeam) {
-                doAction(game, game.getHomeTeam(), game.getGuestTeam(), currentMinute);
+            if (isGameCanceled()) {
+                throw new SpielAbbruchException(currentMinute);
             }
             else {
-                doAction(game, game.getGuestTeam(), game.getHomeTeam(), currentMinute);
+                if (sum > teamValueOfHomeTeam) {
+                    doAction(game, game.getHomeTeam(), game.getGuestTeam(), currentMinute);
+                }
+                else {
+                    doAction(game, game.getGuestTeam(), game.getHomeTeam(), currentMinute);
+                }
             }
             currentMinute += randomInt(0, MAX_DURATION_FOR_NEXT_ACTION_IN_MINUTES);
         } while (currentMinute < PLAYTIME_IN_MINUTES);
