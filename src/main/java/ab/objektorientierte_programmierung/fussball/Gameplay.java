@@ -29,7 +29,8 @@ public class Gameplay {
                     .getListOfSpieler()
                     .get(attackingTeam
                             .getListOfSpieler()
-                            .indexOf(scorer)).incrementGoalCount();
+                            .indexOf(scorer)
+                    ).incrementGoalCount();
             incrementGoalCountOfAttackingTeam(game, attackingTeam);
             updateGameReport(game, attackingTeam, true, currentMinute);
         }

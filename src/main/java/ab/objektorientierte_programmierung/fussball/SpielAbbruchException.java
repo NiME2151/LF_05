@@ -2,7 +2,7 @@ package ab.objektorientierte_programmierung.fussball;
 
 public class SpielAbbruchException extends Exception {
 
-    final int playtime;
+    private final int playtime;
 
     public SpielAbbruchException(int playtime) {
         super();
