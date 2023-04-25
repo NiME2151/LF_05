@@ -23,27 +23,27 @@ class CommandFactory {
         }
     }
 
-    private static CommandTake createCommandTake(Spieler spieler, String nameGegenstand) {
+    private static ICommand createCommandTake(Spieler spieler, String nameGegenstand) {
         return new CommandTake(spieler, nameGegenstand);
     }
 
-    private static CommandQuit createCommandQuit() {
+    private static ICommand createCommandQuit() {
         return new CommandQuit();
     }
 
-    private static CommandPut createCommandPut(Spieler spieler, String nameGegenstand) {
+    private static ICommand createCommandPut(Spieler spieler, String nameGegenstand) {
         return new CommandPut(spieler, nameGegenstand);
     }
 
-    private static CommandInfo createCommandInfo(Spieler spieler) {
+    private static ICommand createCommandInfo(Spieler spieler) {
         return new CommandInfo(spieler);
     }
 
-    private static CommandHelp createCommandHelp() {
+    private static ICommand createCommandHelp() {
         return new CommandHelp();
     }
 
-    private static CommandGo createCommandGo(Spieler spieler, String[] befehlsteile) throws BefehlUnbekanntException {
+    private static ICommand createCommandGo(Spieler spieler, String[] befehlsteile) throws BefehlUnbekanntException {
         befehlsteile[1] = befehlsteile[1].toLowerCase();
         for (Richtungen richtung : Richtungen.values()) {
             if (richtung.name().equalsIgnoreCase(befehlsteile[1])) {
@@ -56,7 +56,7 @@ class CommandFactory {
         throw new BefehlUnbekanntException("Ihre Eingabe \"" + befehlsteile[1] + "\" ist keine gültige Richtungsangabe");
     }
 
-    private static CommandEat createCommandEat(Spieler spieler, String nameNahrung) {
+    private static ICommand createCommandEat(Spieler spieler, String nameNahrung) {
         return new CommandEat(spieler, nameNahrung);
     }
 }
