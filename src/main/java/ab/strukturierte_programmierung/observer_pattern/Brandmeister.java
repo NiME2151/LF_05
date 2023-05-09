@@ -16,10 +16,10 @@ class Brandmeister {
     }
 
     public void work() {
-        notifyObserver();
+        notifyObserver(new CommandWasserMarsch());
     }
 
-    private void notifyObserver() {
-        this.befehlsEmpfaengerListe.forEach(observer -> observer.notify(new CommandWasserMarsch()));
+    private void notifyObserver(ICommand command) {
+        this.befehlsEmpfaengerListe.forEach(observer -> observer.notify(command));
     }
 }
