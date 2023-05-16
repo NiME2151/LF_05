@@ -14,5 +14,5 @@ abstract class Geldschacht {
         this.next = next;
     }
 
-    public abstract List<Geld> liefereGeldscheine(int betrag, List<Geld> geldscheine);
+    public abstract void liefereGeldscheine(int betrag, List<Geld> geldscheine);
 }

@@ -19,6 +19,8 @@ class Geldautomat {
     }
 
     public List<Geld> auszahlenGeld(int betrag) {
-        return this.geldschacht100.liefereGeldscheine(betrag, new ArrayList<>());
+        List<Geld> geldscheine = new ArrayList<>();
+        this.geldschacht100.liefereGeldscheine(betrag, geldscheine);
+        return geldscheine;
     }
 }
