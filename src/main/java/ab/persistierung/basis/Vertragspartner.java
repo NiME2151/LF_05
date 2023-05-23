@@ -48,8 +48,14 @@ class Vertragspartner {
     public String toString() {
         return "Vertragspartner:\n" +
                 "Vorname: " + vorname + "\n" +
-                "Nachname: '" + nachname + "\n" +
-                "Ausweisnummer: '" + ausweisNr + "\n" +
-                "Adresse;" + adresse;
+                "Nachname: " + nachname + "\n" +
+                "Ausweisnummer: " + ausweisNr + "\n" +
+                "Adresse: " + adresse;
+    }
+
+    public String toCSVString() {
+        return this.vorname + " " +
+                this.nachname + "," +
+                this.adresse.toCsvString();
     }
 }

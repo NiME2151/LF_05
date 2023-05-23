@@ -48,10 +48,16 @@ public class Adresse {
 
     @Override
     public String toString() {
-        return "Adresse:\n" +
-                "Straße: " + strasse + "\n" +
-                "Hausnummer: " + hausNr + "\n" +
-                "PLZ: " + plz + "\n" +
-                "Ort: " + ort + "\n";
+        return strasse + ", " +
+                hausNr + ", " +
+                plz + ", " +
+                ort;
+    }
+
+    public String toCsvString() {
+        return this.strasse + " " +
+                this.hausNr + "," +
+                this.plz + "," +
+                this.ort;
     }
 }
