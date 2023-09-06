@@ -1,13 +1,11 @@
 package unit_tests.util;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import util.IO;
 
 import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static util.NumberFormatter.*;
+import static lf_05.util.NumberFormatter.*;
 
 public class UtilTests {
 
